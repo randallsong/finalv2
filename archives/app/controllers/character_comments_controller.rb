@@ -1,0 +1,2 @@
+class CharacterCommentsController < ApplicationController
+end
