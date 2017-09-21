@@ -11,4 +11,4 @@
 #----------------------------------------
 
 
-User.create(name: 'Randall', email: 'randallsong149@gmail.com', password: 'yoho', avatar: '')
+# User.create(name: 'Randall', email: 'randallsong149@gmail.com', password: 'yoho', avatar: '')
