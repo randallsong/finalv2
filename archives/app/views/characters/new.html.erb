@@ -1,0 +1,32 @@
+<h1>Create a New Character</h1>
+
+
+<%= form_for Character.new, remote: true do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+     <%= f.label :gender %><br>
+     <%= f.text_field :gender %>
+    </p>
+
+    <p>
+      <%= f.label :race%><br>
+      <%= f.text_field :race%>
+    </p>
+
+    <p>
+      <%= f.label :alignment%><br>
+      <%= f.text_field :alignment%>
+    </p>
+
+    <p>
+      <%= f.label :biography%><br>
+      <%= f.text_field :biography%>
+    </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

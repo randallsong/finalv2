@@ -1,0 +1,22 @@
+<h1>Create a New Tale</h1>
+
+
+<%= form_for Tale.new, remote: true do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :story %><br>
+    <%= f.text_field :story %>
+  </p>
+
+    <p>
+      <%= f.label :cover%><br>
+			<%= f.file_field :cover%>
+    </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

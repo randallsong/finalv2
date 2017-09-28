@@ -8,5 +8,7 @@ class User < ApplicationRecord
   has_many :characters
   has_one :inbox
 
+  mount_uploader :avatar, AvatarUploader
+
 
 end

@@ -1,5 +1,7 @@
 {
   "name": "archives",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "startbootstrap-simple-sidebar": "^4.0.0-alpha"
+  }
 }
