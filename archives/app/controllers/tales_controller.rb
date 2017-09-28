@@ -7,9 +7,12 @@ class TalesController < ApplicationController
 
 	def create
 		@User = current_user.id
-		@current_user = current_user
-    	@tale = tale.create(title: params[:tale][:title], story: params[:tale][:story], cover: params[:tale][:cover], user_id: @User)
-    	if @tales.save
+		# @current_user = current_user
+    	@tale = Tale.create(title: params[:tale][:title], 
+    						story: params[:tale][:story], 
+    						cover: params[:tale][:cover], 
+    						user_id: @User)
+    	if @tale.save
           respond_to do |format|
             format.html { redirect_to user_path(@tales) }
             format.js 
@@ -25,6 +28,9 @@ class TalesController < ApplicationController
 
 	def show
 		@User = current_user.id
+		@current_user = current_user
+		@tales = @User.tales.find(params[:user_id][@User])
+
 	end
 
 	def edit

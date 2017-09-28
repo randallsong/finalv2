@@ -17,7 +17,9 @@ class UsersController < ApplicationController
 	end
 
 	def show
-
+		@User = User.find(params[:id])
+		@tales = @User.tales
+		@characters = @User.characters.all
 	end
 
 	def edit

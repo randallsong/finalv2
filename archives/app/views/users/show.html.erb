@@ -1,0 +1,9 @@
+<h1>User: <%=@User.email%></h1>
+
+<h1>Tales:</h1>
+
+<% @tales.each do |t| %>
+	<p class="q"> <%= t.title %></p><br>
+	<img class="q" src='<%= t.cover %>'><br>
+
+<% end %>
