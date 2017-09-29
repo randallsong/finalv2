@@ -1,8 +1,12 @@
 class TalesController < ApplicationController
 
+	def index
+		@tales = Tale.all
+	end
+
 	def new 
 		# @tales = tale.new
-    	# @tales = tale.all
+  #   	@tales = tale.all
 	end
 
 	def create
@@ -12,11 +16,7 @@ class TalesController < ApplicationController
     						story: params[:tale][:story], 
     						cover: params[:tale][:cover], 
     						user_id: @User)
-    	if @tale.save
-          respond_to do |format|
-            format.html { redirect_to user_path(@tales) }
-            format.js 
-        end
+        redirect_to tales_path
 	end
 
 	def destroy
@@ -27,9 +27,8 @@ class TalesController < ApplicationController
 	end
 
 	def show
-		@User = current_user.id
-		@current_user = current_user
-		@tales = @User.tales.find(params[:user_id][@User])
+
+		@tale = Tale.find(params[:id])
 
 	end
 
@@ -47,4 +46,4 @@ class TalesController < ApplicationController
 	end
 
 end
-end
+

@@ -1,0 +1,9 @@
+<div id="page_content">
+
+<% @chars.each do |c| %>
+	<li>
+		<a href="characters/<%=c.id%>"><%= c.name %></a>
+	</li>
+<% end %>
+
+</div>

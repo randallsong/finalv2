@@ -1,0 +1,8 @@
+
+<div id="page_content">
+<%@tales.each do |t|%>
+	<li>
+		<a href="tales/<%=t.id%>"><%= t.title%></a>
+	</li>
+<%end%>
+</div>

@@ -1,5 +1,7 @@
 class CharactersController < ApplicationController
-
+	def index
+		@chars = Character.all
+	end
 	def new 
 		
 	end
@@ -13,7 +15,7 @@ class CharactersController < ApplicationController
     								  alignment: params[:character][:alignment],
     								  biography: params[:character][:biography],
     								  user_id: @User)
-    	redirect_to @current_user
+    	redirect_to characters_path
 	end
 
 	def destroy
@@ -21,7 +23,7 @@ class CharactersController < ApplicationController
 	end
 
 	def show
-		@characters = character.all
+		@characters = Character.find(params[:id])
 	end
 
 	def edit
