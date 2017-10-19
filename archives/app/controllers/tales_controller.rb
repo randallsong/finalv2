@@ -20,10 +20,6 @@ class TalesController < ApplicationController
 	end
 
 	def destroy
-		@current_user = current_user
-    	@tales = tales.find(params[:id])
-    	@tales.destroy
-    	redirect_to @current_user
 	end
 
 	def show
