@@ -2,8 +2,8 @@ class CharactersController < ApplicationController
 	def index
 		@chars = Character.all
 	end
-	def new 
-		
+	def new
+
 	end
 
 	def create
@@ -14,6 +14,7 @@ class CharactersController < ApplicationController
     								  race: params[:character][:race],
     								  alignment: params[:character][:alignment],
     								  biography: params[:character][:biography],
+											picture: params[:character][:picture],
     								  user_id: @User)
     	redirect_to characters_path
 	end
@@ -23,11 +24,11 @@ class CharactersController < ApplicationController
 	end
 
 	def show
-		@characters = Character.find(params[:id])
+		@character = Character.find(params[:id])
 	end
 
 	def edit
-		
+
 	end
 
 	def update

@@ -4,7 +4,7 @@ class TalesController < ApplicationController
 		@tales = Tale.all
 	end
 
-	def new 
+	def new
 		# @tales = tale.new
   #   	@tales = tale.all
 	end
@@ -12,9 +12,9 @@ class TalesController < ApplicationController
 	def create
 		@User = current_user.id
 		# @current_user = current_user
-    	@tale = Tale.create(title: params[:tale][:title], 
-    						story: params[:tale][:story], 
-    						cover: params[:tale][:cover], 
+    	@tale = Tale.create(title: params[:tale][:title],
+    						story: params[:tale][:story],
+    						cover: params[:tale][:cover],
     						user_id: @User)
         redirect_to tales_path
 	end
@@ -29,7 +29,7 @@ class TalesController < ApplicationController
 	end
 
 	def edit
-		
+
 	end
 
 	def update
@@ -42,4 +42,3 @@ class TalesController < ApplicationController
 	end
 
 end
-
